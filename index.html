@@ -1,77 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
   <title>Unpack Your Learning</title>
 
+  <script type="module"
+    src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js">
+  </script>
+
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
+      background: #f2eee7;
+      color: #222;
       text-align: center;
-      padding: 40px 20px;
-      background: #f2f2f2;
     }
 
-    .card {
-      max-width: 600px;
+    .container {
+      max-width: 700px;
       margin: auto;
-      background: white;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 5px 20px rgba(0,0,0,.15);
-    }
-
-    .box {
-      font-size: 100px;
-      margin: 20px;
+      padding: 25px 18px;
     }
 
     h1 {
       margin-bottom: 5px;
     }
 
-    .success {
-      background: #e7f5e7;
-      padding: 15px;
-      border-radius: 10px;
-      margin-top: 25px;
+    .subtitle {
+      font-size: 18px;
+      margin-top: 5px;
+    }
+
+    model-viewer {
+      width: 100%;
+      height: 430px;
+      background: #ffffff;
+      border-radius: 16px;
+      margin-top: 20px;
+      box-shadow: 0 5px 18px rgba(0,0,0,.18);
+    }
+
+    .instructions {
+      background: white;
+      padding: 18px;
+      border-radius: 12px;
+      margin-top: 20px;
+      line-height: 1.5;
+    }
+
+    .test {
+      margin-top: 15px;
       font-weight: bold;
     }
   </style>
-
 </head>
 
 <body>
 
-  <div class="card">
+<div class="container">
 
-    <div class="box">📦</div>
+  <h1>📦 Unpack Your Learning</h1>
 
-    <h1>Unpack Your Learning</h1>
+  <p class="subtitle">
+    Handle With Experience
+  </p>
+
+  <model-viewer
+    src="models/unpack-box.glb"
+    alt="Unpack Your Learning packing box"
+    camera-controls
+    auto-rotate
+    shadow-intensity="1"
+    exposure="1">
+
+  </model-viewer>
+
+  <div class="instructions">
+
+    <strong>3D MODEL TEST</strong>
 
     <p>
-      Mixed Reality Try-It
+      Drag the box with your finger to rotate it.
     </p>
 
-    <div class="success">
-      TEST 1 SUCCESSFUL
+    <p>
+      Pinch to zoom in and out.
+    </p>
+
+    <div class="test">
+      If you can see and rotate the packing box,
+      Test 2 is successful.
     </div>
-
-    <p>
-      If you can see this page, the first part of the
-      Mixed Reality experience is working.
-    </p>
-
-    <p>
-      Next: We'll add the camera and place a virtual
-      packing box in your physical environment.
-    </p>
 
   </div>
 
-</body>
+</div>
 
+</body>
 </html>
