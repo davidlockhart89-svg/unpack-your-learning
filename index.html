@@ -69,13 +69,34 @@
     Handle With Experience
   </p>
 
-  <model-viewer
+<model-viewer
     src="models/unpack-box.glb"
+    ios-src="models/unpack-box.usdz"
     alt="Unpack Your Learning packing box"
     camera-controls
     auto-rotate
     shadow-intensity="1"
-    exposure="1">
+    exposure="1"
+    ar
+    ar-modes="webxr scene-viewer quick-look">
+
+    <button
+      slot="ar-button"
+      style="
+        background: #222;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 14px 22px;
+        font-size: 18px;
+        font-weight: bold;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+      ">
+      📦 VIEW IN YOUR SPACE
+    </button>
 
   </model-viewer>
 
